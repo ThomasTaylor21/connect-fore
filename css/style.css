@@ -24,6 +24,7 @@ body {
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
 }
+/* CSS Grid Layout */
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
