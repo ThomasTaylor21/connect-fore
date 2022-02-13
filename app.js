@@ -8,7 +8,8 @@ const connectForeGrid.wrapper = [
 
 // console.log(connectForeGrid)
 
-// Winning lines where 4 in a row can exist (array)
+// Winning lines where 4 in a row can exist (array) may be able to set up a for each that states if blue has four consecutive spots in and of the winning combo lines that player is winner, Else if not, then Player 2 
+// red has the same condition and if all 48 balls are used then it is a tie. 
 const winningLines = [
   //vertical
 [a1, b1, c1, d1, e1, f1, g1, h1]
