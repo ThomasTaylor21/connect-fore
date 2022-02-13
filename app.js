@@ -22,7 +22,7 @@ console.log("me here")
 
 
 /*------------------------ Cached Element References ------------------------*/
-// const boardSquares = document.querySelector(".board")
+const boardSquares = document.querySelector(".board")
 // console.log(boardSquares);
 
 // const message = document.getElementById("message")
@@ -39,10 +39,31 @@ console.log("me here")
 
 /*-------------------------------- Functions --------------------------------*/
 conForSpots = [
-  null, null, null, null,
-  null, null, null, null,
-  null, null, null, null,
-  null, null, null, null,
-  null, null, null, null
+  null, null, null, null, null, null,
+  null, null, null, null, null, null,
+  null, null, null, null, null, null,
+  null, null, null, null, null, null,
+  null, null, null, null, null, null,
+  null, null, null, null, null, null,
+  null, null, null, null, null, null,
+  null, null, null, null, null, null
 ]
 console.log(conForSpots)  //these nulls refer to the game board in order
+
+
+function render() {
+
+  for (let i = 0; i < conForSpots.length; i++) {
+    // console.log(squares[i])
+    if ([i] === 1) {
+      boardSquares.children[i].textContent = 'x'
+      // message.textContent = 'Turn: O'
+    } else if
+      (squares[i] === -1) {
+      boardSquares.children[i].textContent = '0'
+      message.textContent = 'Turn: X'
+    } else {
+      boardSquares.children[i].textContent = ""
+    }
+  }
+}
