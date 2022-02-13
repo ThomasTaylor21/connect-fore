@@ -3,14 +3,26 @@ console.log("me here")
 
 /*-------------------------------- Constants --------------------------------*/
 
-// const connectForeGrid = [
-//  [4a, 4b, 4c, 4d],
-//  [3.a, 3b, 3c, 3d],
-//  [2a, 2b, 2c, 2d],
-//  [1a, 1b, 1c, 1d],
-//  [0a, 0b, 0c, 0d]
-// ]
+const connectForeGrid.wrapper = [
+  [a1, b1, c1, d1, e1, f1, g1, h1]
+
 // console.log(connectForeGrid)
+
+// Winning lines where 4 in a row can exist (array)
+const winningLines = [
+  //vertical
+[a1, b1, c1, d1, e1, f1, g1, h1]
+
+
+
+
+]
+console / log(winningLines);
+
+
+
+
+
 
 /*---------------------------- Variables (state) ----------------------------*/
 // let squares, winner, turn
@@ -38,18 +50,21 @@ const boardSquares = document.querySelector(".board")
 
 
 /*-------------------------------- Functions --------------------------------*/
-conForSpots = [
-  null, null, null, null, null, null,
-  null, null, null, null, null, null,
-  null, null, null, null, null, null,
-  null, null, null, null, null, null,
-  null, null, null, null, null, null,
-  null, null, null, null, null, null,
-  null, null, null, null, null, null,
-  null, null, null, null, null, null
-]
-console.log(conForSpots)  //these nulls refer to the game board in order
 
+function init() {
+  conForSpots = [
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null
+  ]
+}
+console.log(conForSpots)  //these nulls refer to the game board in order
+function init()
 
 function render() {
 
