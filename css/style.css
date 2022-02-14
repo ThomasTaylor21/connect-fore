@@ -34,7 +34,7 @@ body {
   padding-block: 10px;
   gap: 2px;
   grid-auto-rows: center;
-}
+/* }creat a single Flex statement to cover all .wrapper. */
 .wrapper {
   display: grid;
   grid-area: center;
