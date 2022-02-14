@@ -2,9 +2,9 @@ console.log("me here")
 // test out grid using 4 by 6 with decenting from top left to bottom right
 
 /*-------------------------------- Constants --------------------------------*/
-
-const connectForeGrid.wrapper = [
-  [a1, b1, c1, d1, e1, f1, g1, h1]
+//set up top -drop row
+const connectForeGrid.board = [
+  [dp1, dp2, dp3, dp4, dp5, dp6] 
 
 // console.log(connectForeGrid)
 
@@ -12,6 +12,7 @@ const connectForeGrid.wrapper = [
 // red has the same condition and if all 48 balls are used then it is a tie. 
 const winningLines = [
   //vertical
+ 
 [h1, g1, f1, e1, d1, c1, b1, a1]
 [h2, g2, f2, e2, d2, c2, b2, a2]
 [h3, g3, f3, e3, d3, c3, b3, a3]

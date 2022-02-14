@@ -26,7 +26,7 @@ body {
 
 }
 /* CSS Grid Layout */
-.wrapper {
+.board {
   display: grid;
   margin: 50px;
   border: 2px solid green;
@@ -35,7 +35,7 @@ body {
   gap: 2px;
   grid-auto-rows: center;
 /* }create a single Flex statement to cover all .wrapper. */
-}.wrapper {
+}.board {
   display: grid;
   grid-area: center;
   grid-template-columns: repeat(6, 15fr);
