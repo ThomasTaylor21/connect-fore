@@ -3,24 +3,22 @@ console.log("me here")
 
 /*-------------------------------- Constants --------------------------------*/
 //set up top -drop row
-const connectForeGrid.board = [
+const topDropRow = 
   [dp1, dp2, dp3, dp4, dp5, dp6] 
-
 // console.log(connectForeGrid)
 
 // Winning lines where 4 in a row can exist (array) may be able to set up a for each that states if blue has four consecutive spots in and of the winning combo lines that player is winner, Else if not, then Player 2 
 // red has the same condition and if all 48 balls are used then it is a tie. 
-const winningLines = [
+const winningLines = 
   //vertical
  
 [h1, g1, f1, e1, d1, c1, b1, a1]
-[h2, g2, f2, e2, d2, c2, b2, a2]
 [h3, g3, f3, e3, d3, c3, b3, a3]
-[h4, g4, f4, e4, d4, c4, b4, a4] 
-[h5, g5, f5, e5, d5, c5, b5, a5]
+[h4, g4, f4, e4, d4, c4, b4, a4] [h5, g5, f5, e5, d5, c5, b5, a5]
 [h6, g6, f6, e6, d6, c6, b6, a6]
-]
-console / log(winningLines);
+
+console.log(winningLines);
+
 
 
 
@@ -37,8 +35,8 @@ console / log(winningLines);
 
 
 /*------------------------ Cached Element References ------------------------*/
-const boardSquares = document.querySelector(".board")
-// console.log(boardSquares);
+// const connectForeGrid = document.querySelector(".board")
+// console.log(connectForeGrid);
 
 // const message = document.getElementById("message")
 
@@ -74,14 +72,14 @@ function render() {
   for (let i = 0; i < conForSpots.length; i++) {
     // console.log(squares[i])
     if ([i] === 1) {
-      boardSquares.children[i].textContent = 'x'
+      conForSpots.children[i].textContent = 'x'
       // message.textContent = 'Turn: O'
     } else if
-      (squares[i] === -1) {
-      boardSquares.children[i].textContent = '0'
+      (BeforeUnloadEvent[i] === -1) {
+      conForSpots.children[i].textContent = '0'
       message.textContent = 'Turn: X'
     } else {
-      boardSquares.children[i].textContent = ""
+      conForSpots.children[i].textContent = ""
     }
   }
 }
