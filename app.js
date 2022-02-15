@@ -11,10 +11,10 @@ console.log("me here")
 // red has the same condition and if all 48 balls are used then it is a tie. 
 
 // let board=document.querySelector(".board") 
-// let player=document.querySelector(".player") 
-// let playAgain=document.querySelector(".playAgain") 
-// let restart=document.querySelector(".restart") 
-// let box=0 
+let player=document.querySelector(".player") 
+let playAgain=document.querySelector(".playAgain") 
+let restart=document.querySelector(".restart") 
+let box=0 
 
 // const winningLines = 
 //   //vertical
@@ -74,19 +74,19 @@ function init() {
 console.log(board)  //these nulls refer to the game board in order
 function init()
 {}
-// function render() {
+function render() {
 
-//   for (let i = 0; i < board.length; i++) {
-//     // console.log(squares[i])
-//     if ([i] === 1) {
-//       conForSpots.children[i].textContent = 'x'
-//       // message.textContent = 'Turn: O'
-//     } else if
-//       (BeforeUnloadEvent[i] === -1) {
-//       conForSpots.children[i].textContent = '0'
-//       message.textContent = 'Turn: X'
-//     } else {
-//       conForSpots.children[i].textContent = ""
-//     }
-//   }
-// }
+  for (let i = 0; i < board.length; i++) {
+    // console.log(squares[i])
+    if ([i] === 1) {
+      board.children[i].textContent = 'blue'
+      message.textContent = 'Turn: blueO'
+    } else if
+      (BeforeUnloadEvent[i] === -1) {
+      board.children[i].textContent = 'red'
+      message.textContent = 'Turn: blue'
+    } else {
+      board.children[i].textContent = ""
+    }
+  }
+}
