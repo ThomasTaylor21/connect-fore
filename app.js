@@ -17,7 +17,13 @@ let restart=document.querySelector(".restart")
 let box=0 
 
 // const winningLines = 
-//   //vertical
+// function filterInt(value) {
+//   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
+//     return Number(value)
+//   } else {
+//     return NaN
+//   }
+ //vertical
  
 // [h1, g1, f1, e1, d1, c1, b1, a1]
 // [h3, g3, f3, e3, d3, c3, b3, a3]
