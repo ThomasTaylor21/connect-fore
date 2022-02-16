@@ -41,10 +41,10 @@ body {
 }
 div {
 border: 2px solid black;
+text-align: center;
 color: rgb(25, 35, 16);
-
-
-
+flex-wrap: inherit;
+border-radius: 50%;
 }
 /* .board { 
   
