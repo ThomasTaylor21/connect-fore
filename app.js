@@ -109,8 +109,8 @@ console.log(board);
 
 
 
-// let cfBoard=document.querySelectorAll('section.board')
-// console.log(board)
+let cfboard=document.querySelectorAll('section.board')
+console.log(board)
 // let message = document.getElementById('click');
 // // function switchTurn () {
 // // }
@@ -164,24 +164,24 @@ function fillCircle(evt) {
     ]
   }
   // console.log(boardArray)  //these nulls refer to the game board in order
-  // function init()
+  function init()
   {
     function render() {
 
-      // for (let i = 0; i < board.length; i++) {
-      //   // console.log(squares[i])
-      //   if ([i] === 1) {
-      //     board.children[i].textContent = 'blue'
-      //     message.textContent = 'Turn: blueO'
-      //   } else if
-      //     (BeforeUnloadEvent[i] === -1) {
-      //     board.children[i].textContent = 'red'
-      //     message.textContent = 'Turn: blue'
-      //   } else {
-      //     board.children[i].textContent = ""
-      //   }
+      for (let i = 0; i < board.length; i++) {
+        // console.log(squares[i])
+        if ([i] === 1) {
+          board.children[i].textContent = 'blue'
+          message.textContent = 'Turn: blueO'
+        } else if
+          (BeforeUnloadEvent[i] === -1) {
+          board.children[i].textContent = 'red'
+          message.textContent = 'Turn: blue'
+        } else {
+          board.children[i].textContent = ""
+        }
   
-      // }
+      }
     }
   }
 }
