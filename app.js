@@ -89,8 +89,8 @@ console.log(winFourArray);
 
 
 /*------------------------ Cached Element References ------------------------*/
-let board=document.querySelector(".board")
-console.log(board);
+let boardArray=document.querySelector(".boardArray")
+console.log(boardArray);
 
 // const message = document.getElementById("message")
 
@@ -101,13 +101,25 @@ console.log(board);
 // const resetBtn = document.getElementById('resetBtn')
 
 /*----------------------------- Event Listeners -----------------------------*/
-function handleClick(click , evt) {
-  board.function(fillCircle)
-  board.addEventListener("click" , handleClick)
-}
-console.log(boardArray);
+init()
+board.forEach(function(fillCircle){
+fillCircle.addEventListener('click' , handleClick)
+// function fillCircle(evt) {
+  // fill in empty circle that is clicked
+  // when clicking on circle, the data will show in console.log
+  console.log("clickEvent,", evt);
+});
 
-  function fillCircle(click, evt)
+
+
+
+// function handleClick(click, evt) {
+//   board.function(fillCircle)
+//   board.addEventListener("click" , handleClick)
+// }
+// console.log(boardArray);
+
+  // function fillCircle(click, evt)
   
    // fill in empty circle that is clicked
   // when clicking on circle, the data will show in console.log
@@ -115,7 +127,7 @@ console.log(boardArray);
 //console.log('click' , evt)
 /*-------------------------------- Functions --------------------------------*/
 
-function init (){ 
+function init() {
   boardArray = [
     null, null, null, null, null, null, null,
     null, null, null, null, null, null, null,
