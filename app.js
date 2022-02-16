@@ -102,12 +102,12 @@ console.log(board);
 
 /*----------------------------- Event Listeners -----------------------------*/
 function handleClick(click , evt) {
-  // board.function(circle)
+  board.function(fillCircle)
   board.addEventListener("click" , handleClick)
 }
-console.log(board)
+console.log(boardArray);
 
-//   function fillCircle(click, evt)
+  function fillCircle(click, evt)
   
    // fill in empty circle that is clicked
   // when clicking on circle, the data will show in console.log
@@ -115,8 +115,8 @@ console.log(board)
 //console.log('click' , evt)
 /*-------------------------------- Functions --------------------------------*/
 
-function init() {
-  board = [
+function init (){ 
+  boardArray = [
     null, null, null, null, null, null, null,
     null, null, null, null, null, null, null,
     null, null, null, null, null, null, null,
@@ -126,7 +126,7 @@ function init() {
     null, null, null, null, null, null, null
   ]
 }
-console.log(board)  //these nulls refer to the game board in order
+console.log(boardArray)  //these nulls refer to the game board in order
 // function init()
 
 // function render() {
