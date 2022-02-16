@@ -1,5 +1,67 @@
 console.log("me here")
 // test out grid using 4 by 6 with decenting from top left to bottom right
+const winFour = [
+  [1, 2, 3, 4], 
+  [2, 3, 4, 5],
+  [3, 4, 5, 6],
+  [4, 5, 6, 7],
+  
+  [8, 9, 10, 11],
+  [9, 10, 11, 12],
+  [10, 11, 12, 13],
+  [11, 12, 13, 14],
+
+  [15, 16, 17, 18],
+  [16, 17, 18, 19],
+  [17, 18, 19, 20],
+  [18, 19, 20, 21],
+
+  [22, 23, 24, 25],
+  [23, 24, 25, 26],
+  [24, 25, 26, 27],
+  [25, 26, 27, 28],
+
+  [29, 30, 31, 32],
+  [30, 31, 32, 33],
+  [31, 32, 33, 34],
+  [32, 33, 34, 35],
+
+  [36, 37, 38, 39],
+  [37, 38, 39, 40],
+  [38, 39, 40, 41],
+  [39, 40, 41, 42],
+  
+  [43, 44, 45, 46],
+  [44, 45, 46, 47],
+  [45, 46, 47, 48],
+  [46, 47, 48, 49],
+
+  [1, 9, 17, 25],
+  [9, 17, 25, 33],
+  [17, 25, 33, 41],
+  [25, 33, 41, 49],
+  
+  [2, 10, 18, 26],
+  [10, 18, 26, 34],
+  [18, 26, 34, 42],
+
+  [3, 11, 19, 27],
+  [11, 19, 27, 35],
+
+  [4, 12, 20, 28],
+
+  [8, 16, 24, 32],
+  [16, 24, 32, 40],
+  [24, 32, 40, 48],
+  [15, 23, 31, 39],
+  [23, 31, 39, 47],
+
+  [22, 20, 38, 46],
+
+
+
+]
+console.log(winFour);
 
 /*-------------------------------- Constants --------------------------------*/
 //set up top -drop row
@@ -35,17 +97,17 @@ let box=0
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let squares, winner, turn
+
 // let gameOutcome = [isTie, winner, loser]
-const player1 = -1
-const player2 = 1
-let numOfTurns
+const playerBlue = -1
+const playerRed = 1
+let winner, turn, board
 //const isTie = // === no winning combos found on the board, != winningCombos
 
 
 /*------------------------ Cached Element References ------------------------*/
-const board = document.querySelector(".board")
-console.log(board);
+// const board = document.querySelector(".board")
+// console.log(board);
 // console.log(connectForeGrid);
 
 // const message = document.getElementById("message")
