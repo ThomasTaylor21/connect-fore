@@ -82,26 +82,15 @@ console.log(winFourArray);
 // Winning lines where 4 in a row can exist (array) may be able to set up a for each that states if blue has four consecutive spots in and of the winning combo lines that player is winner, Else if not, then Player 2 
 // red has the same condition and if all 48 balls are used then it is a tie. 
 
-// let board=document.querySelector(".board") 
+let board=document.querySelector(".board") 
 // let player=document.querySelector(".player") 
 // let playAgain=document.querySelector(".playAgain") 
 // let restart=document.querySelector(".restart") 
 // let box=0 
 
 // const winningLines = 
-// function filterInt(value) {
-//   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
-//     return Number(value)
-//   } else {
-//     return NaN
-//   }
- //vertical
+/
 
-// [h1, g1, f1, e1, d1, c1, b1, a1]
-// [h3, g3, f3, e3, d3, c3, b3, a3]
-// [h4, g4, f4, e4, d4, c4, b4, a4]
-// [h5, g5, f5, e5, d5, c5, b5, a5]
-// [h6, g6, f6, e6, d6, c6, b6, a6]
 
 // console.log(winningLines);
 
@@ -115,8 +104,15 @@ console.log(winFourArray);
 
 
 /*------------------------ Cached Element References ------------------------*/
-let boardArray=document.querySelector(".boardArray")
-console.log(boardArray);
+let cfBoard=document.querySelectorAll('section.board')
+console.log(board)
+let message = document.getElementById('click');
+// function switchTurn () {
+// }
+// console.log(gameBoard.children)
+
+board = document.querySelectorAll(".board")
+console.log(cfBoard);
 
 // const message = document.getElementById("message")
 
@@ -128,22 +124,22 @@ console.log(boardArray);
 
 /*----------------------------- Event Listeners -----------------------------*/
 // init()
-// board.forEach(function(fillCircle){
-// fillCircle.addEventListener('click' , handleClick)
-// // function fillCircle(evt) {
-//   // fill in empty circle that is clicked
-//   // when clicking on circle, the data will show in console.log
-//   console.log("clickEvent,", evt);
-// });
-
-
-
-
-// function handleClick(click, evt) {
-//   board.function(fillCircle)
-//   board.addEventListener("click" , handleClick)
+// board.forEach(fillCircle) {
+//   fillCircle.addEventListener('click', handleClick)
+//   // // function fillCircle(evt) {
+//   //   // fill in empty circle that is clicked
+//   //   // when clicking on circle, the data will show in console.log
+//   //   console.log("clickEvent,", evt);
+//   // });
 // }
-// console.log(boardArray);
+
+
+
+function handleClick(click, evt) {
+  board.function(fillCircle)
+  board.addEventListener("click" , handleClick)
+}
+console.log(board);
 
   // function fillCircle(click, evt)
   
@@ -166,20 +162,21 @@ function init() {
 }
 console.log(boardArray)  //these nulls refer to the game board in order
 // function init()
+{
+  function render() {
 
-// function render() {
-
-//   for (let i = 0; i < board.length; i++) {
-//     // console.log(squares[i])
-//     if ([i] === 1) {
-//       board.children[i].textContent = 'blue'
-//       message.textContent = 'Turn: blueO'
-//     } else if
-//       (BeforeUnloadEvent[i] === -1) {
-//       board.children[i].textContent = 'red'
-//       message.textContent = 'Turn: blue'
-//     } else {
-//       board.children[i].textContent = ""
-//     }
-//   }
-// }
+    for (let i = 0; i < board.length; i++) {
+      // console.log(squares[i])
+      if ([i] === 1) {
+        board.children[i].textContent = 'blue'
+        message.textContent = 'Turn: blueO'
+      } else if
+        (BeforeUnloadEvent[i] === -1) {
+        board.children[i].textContent = 'red'
+        message.textContent = 'Turn: blue'
+      } else {
+        board.children[i].textContent = ""
+      }
+  
+    }
+  }
