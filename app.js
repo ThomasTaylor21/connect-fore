@@ -82,17 +82,12 @@ console.log(winFourArray);
 // Winning lines where 4 in a row can exist (array) may be able to set up a for each that states if blue has four consecutive spots in and of the winning combo lines that player is winner, Else if not, then Player 2 
 // red has the same condition and if all 48 balls are used then it is a tie. 
 
-let board=document.querySelector(".board") 
-// let player=document.querySelector(".player") 
-// let playAgain=document.querySelector(".playAgain") 
-// let restart=document.querySelector(".restart") 
-// let box=0 
-
-// const winningLines = 
-/
-
-
-// console.log(winningLines);
+let squares, winner, turn
+// let gameOutcome = [isTie, winner, loser]
+const player1 = -1
+const player2 = 1
+let numOfTurns
+//const isTie = // === no winning combos found on the board, != winningCombos
 
 
 
@@ -104,15 +99,25 @@ let board=document.querySelector(".board")
 
 
 /*------------------------ Cached Element References ------------------------*/
-let cfBoard=document.querySelectorAll('section.board')
-console.log(board)
-let message = document.getElementById('click');
-// function switchTurn () {
-// }
-// console.log(gameBoard.children)
+const board = document.querySelector(".board")
+console.log(board);
 
-board = document.querySelectorAll(".board")
-console.log(cfBoard);
+
+
+
+
+
+
+
+// let cfBoard=document.querySelectorAll('section.board')
+// console.log(board)
+// let message = document.getElementById('click');
+// // function switchTurn () {
+// // }
+// // console.log(gameBoard.children)
+
+// let board = document.querySelector(".board");
+// console.log(cfBoard);
 
 // const message = document.getElementById("message")
 
@@ -124,59 +129,59 @@ console.log(cfBoard);
 
 /*----------------------------- Event Listeners -----------------------------*/
 // init()
-// board.forEach(fillCircle) {
-//   fillCircle.addEventListener('click', handleClick)
-//   // // function fillCircle(evt) {
-//   //   // fill in empty circle that is clicked
-//   //   // when clicking on circle, the data will show in console.log
-//   //   console.log("clickEvent,", evt);
-//   // });
-// }
+  
+board.addEventListener('click' , fillCircle);
+function fillCircle(evt) {
+  // fill in empty circle that is clicked
+  // when clicking on circle, the data will show in console.log
+  console.log("clickEvent,", evt);
 
 
 
-function handleClick(click, evt) {
-  board.function(fillCircle)
-  board.addEventListener("click" , handleClick)
-}
-console.log(board);
+  function handleClick(click, evt) {
+    board.function(fillCircle)
+    board.addEventListener("click", handleClick)
+  }
+  console.log(board);
 
   // function fillCircle(click, evt)
   
-   // fill in empty circle that is clicked
+  // fill in empty circle that is clicked
   // when clicking on circle, the data will show in console.log
 
-//console.log('click' , evt)
-/*-------------------------------- Functions --------------------------------*/
+  //console.log('click' , evt)
+  /*-------------------------------- Functions --------------------------------*/
 
-function init() {
-  boardArray = [
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null
+  function init() {
+    boardArray = [
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null
     
-  ]
-}
-console.log(boardArray)  //these nulls refer to the game board in order
-// function init()
-{
-  function render() {
+    ]
+  }
+  // console.log(boardArray)  //these nulls refer to the game board in order
+  // function init()
+  {
+    function render() {
 
-    for (let i = 0; i < board.length; i++) {
-      // console.log(squares[i])
-      if ([i] === 1) {
-        board.children[i].textContent = 'blue'
-        message.textContent = 'Turn: blueO'
-      } else if
-        (BeforeUnloadEvent[i] === -1) {
-        board.children[i].textContent = 'red'
-        message.textContent = 'Turn: blue'
-      } else {
-        board.children[i].textContent = ""
-      }
+      // for (let i = 0; i < board.length; i++) {
+      //   // console.log(squares[i])
+      //   if ([i] === 1) {
+      //     board.children[i].textContent = 'blue'
+      //     message.textContent = 'Turn: blueO'
+      //   } else if
+      //     (BeforeUnloadEvent[i] === -1) {
+      //     board.children[i].textContent = 'red'
+      //     message.textContent = 'Turn: blue'
+      //   } else {
+      //     board.children[i].textContent = ""
+      //   }
   
+      // }
     }
   }
+}
