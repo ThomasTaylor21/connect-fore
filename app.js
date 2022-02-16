@@ -123,8 +123,8 @@ let winner, turn, board
 function fillCircle(evt) {
   // fill in empty circle that is clicked
   // when clicking on circle, the data will show in console.log
-  console.log("clickEvent,", evt);
 }
+console.log('click','', evt)
 
 /*-------------------------------- Functions --------------------------------*/
 
