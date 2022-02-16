@@ -1,6 +1,8 @@
 console.log("me here")
 // test out grid using 4 by 6 with decenting from top left to bottom right
-let winFourArray = [
+/*-------------------------------- Constants --------------------------------*/
+//set up top -drop row
+const winFourArray = [
   [1, 2, 3, 4], 
   [2, 3, 4, 5],
   [3, 4, 5, 6],
@@ -48,20 +50,17 @@ let winFourArray = [
 ]
 console.log(winFourArray);
 
-/*-------------------------------- Constants --------------------------------*/
-//set up top -drop row
-// const topDropRow = 
-//   [dp1, dp2, dp3, dp4, dp5, dp6, dp7] 
-// console.log(connectForeGrid)
+
+/*---------------------------- Variables (state) ----------------------------*/
 
 // Winning lines where 4 in a row can exist (array) may be able to set up a for each that states if blue has four consecutive spots in and of the winning combo lines that player is winner, Else if not, then Player 2 
 // red has the same condition and if all 48 balls are used then it is a tie. 
 
 // let board=document.querySelector(".board") 
-let player=document.querySelector(".player") 
-let playAgain=document.querySelector(".playAgain") 
-let restart=document.querySelector(".restart") 
-let box=0 
+// let player=document.querySelector(".player") 
+// let playAgain=document.querySelector(".playAgain") 
+// let restart=document.querySelector(".restart") 
+// let box=0 
 
 // const winningLines = 
 // function filterInt(value) {
@@ -81,19 +80,17 @@ let box=0
 // console.log(winningLines);
 
 
-/*---------------------------- Variables (state) ----------------------------*/
 
 // let gameOutcome = [isTie, winner, loser]
-const playerBlue = -1
-const playerRed = 1
-let winner, turn, board
+// const playerBlue = -1
+// const playerRed = 1
+// let winner, turn, board
 //const isTie = // === no winning combos found on the board, != winningCombos
 
 
 /*------------------------ Cached Element References ------------------------*/
 let board=document.querySelector(".board")
 console.log(board);
-// console.log(connectForeGrid);
 
 // const message = document.getElementById("message")
 
@@ -104,8 +101,12 @@ console.log(board);
 // const resetBtn = document.getElementById('resetBtn')
 
 /*----------------------------- Event Listeners -----------------------------*/
-{
-board.addEventListener('click', fillCircle);
+function handleClick(click , evt) {
+  // board.function(circle)
+  board.addEventListener("click" , handleClick)
+}
+console.log(board)
+
 //   function fillCircle(click, evt)
   
    // fill in empty circle that is clicked
@@ -113,7 +114,7 @@ board.addEventListener('click', fillCircle);
 
 //console.log('click' , evt)
 /*-------------------------------- Functions --------------------------------*/
-}
+
 function init() {
   board = [
     null, null, null, null, null, null, null,
@@ -126,21 +127,21 @@ function init() {
   ]
 }
 console.log(board)  //these nulls refer to the game board in order
-function init()
-{}
-function render() {
+// function init()
 
-  for (let i = 0; i < board.length; i++) {
-    // console.log(squares[i])
-    if ([i] === 1) {
-      board.children[i].textContent = 'blue'
-      message.textContent = 'Turn: blueO'
-    } else if
-      (BeforeUnloadEvent[i] === -1) {
-      board.children[i].textContent = 'red'
-      message.textContent = 'Turn: blue'
-    } else {
-      board.children[i].textContent = ""
-    }
-  }
-}
+// function render() {
+
+//   for (let i = 0; i < board.length; i++) {
+//     // console.log(squares[i])
+//     if ([i] === 1) {
+//       board.children[i].textContent = 'blue'
+//       message.textContent = 'Turn: blueO'
+//     } else if
+//       (BeforeUnloadEvent[i] === -1) {
+//       board.children[i].textContent = 'red'
+//       message.textContent = 'Turn: blue'
+//     } else {
+//       board.children[i].textContent = ""
+//     }
+//   }
+// }
