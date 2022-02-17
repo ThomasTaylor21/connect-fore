@@ -90,7 +90,7 @@ let numOfTurns
 
 
 /*------------------------ Cached Element References ------------------------*/
-const board = document.querySelector(".board")
+const board = document.querySelectorAll(".sqrs")
 const message = document.querySelector("#message")
 
 // let message = document.getElementById('click');
@@ -108,8 +108,7 @@ const message = document.querySelector("#message")
 // const resetBtn = document.getElementById('resetBtn')
 
 /*----------------------------- Event Listeners -----------------------------*/
-board.addEventListener("click", handleClick)
-  
+  board.forEach(circle  => circle.addEventListener("click", handleClick))
 
 // function fillCircle(click, evt)
 
@@ -136,6 +135,11 @@ function init() {
   turn = 1
 }
 // console.log(boardArray)  //these nulls refer to the game board in order (Done)
+function handleClick(evt) {
+let idx = parseInt(evt.target.id.slice(2)) 
+  console.log(idx)
+  
+}
 
 function render() {
   
