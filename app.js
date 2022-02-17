@@ -137,9 +137,29 @@ function init() {
 // console.log(boardArray)  //these nulls refer to the game board in order (Done)
 function handleClick(evt) {
 let idx = parseInt(evt.target.id.slice(2)) 
+  
   console.log(idx)
   
 }
+// want to change color of disc
+
+function changeColorDisc() {
+  board.forEach((circle, idx) => {
+    if (circle === -1) {
+      board[idx].style.bgColor = 'red'
+    }
+    else if (circle !== -1) {
+      board[idx].style.bgColor = 'blue'
+    }
+    else {
+      board[idx].style.bgColor = 'brown'
+    }
+console.log(changeColorDisc)
+  })
+
+}
+
+
 
 function render() {
   
