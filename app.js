@@ -149,7 +149,7 @@ function fillCircle(evt) {
   // fill in empty circle that is clicked
   // when clicking on circle, the data will show in console.log
 
-  //console.log('click' , evt)
+  //console.log('click' , evt)done
   /*-------------------------------- Functions --------------------------------*/
 
   function init() {
@@ -163,7 +163,7 @@ function fillCircle(evt) {
     
     ]
   }
-  // console.log(boardArray)  //these nulls refer to the game board in order
+  // console.log(boardArray)  //these nulls refer to the game board in order (Done)
   function init()
   {
     function render() {
