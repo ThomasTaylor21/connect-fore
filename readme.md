@@ -27,7 +27,7 @@ Hint: Flexbox Group
  Create a Reset Button when the winner has been declared so players can play again.
 
 ### Connect-fore (Take a look)
-
+## Concept Image Captures
 https://imgur.com/mFJHKqU
-
+https://imgur.com/tV2t91F
 ## Technology
