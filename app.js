@@ -1,7 +1,4 @@
-console.log("me here")
-// test out grid using 4 by 6 with decenting from top left to bottom right
 /*-------------------------------- Constants --------------------------------*/
-//set up top -drop row
 const winFourArray = [
   [0, 1, 2, 3],
   [3, 4, 5, 6],
@@ -73,10 +70,6 @@ const winFourArray = [
   [12, 19, 26, 33], 
   [13, 20, 27, 34],
 ]
-
-console.log(winFourArray);
-
-
 /*---------------------------- Variables (state) ----------------------------*/
 
 // Winning lines where 4 in a row can exist (array) may be able to set up a for each that states if blue has four consecutive spots in and of the winning combo lines that player is winner, Else if not, then Player 2 
@@ -84,8 +77,6 @@ console.log(winFourArray);
 
 let squares, winner, turn
 // let gameOutcome = [isTie, winner, loser]
-const player1 = -1
-const player2 = 1
 let numOfTurns
 //const isTie = // === no winning combos found on the board, != winningCombos
 
@@ -100,25 +91,14 @@ let numOfTurns
 
 /*------------------------ Cached Element References ------------------------*/
 const board = document.querySelector(".board")
-console.log(board);
+const message = document.querySelector("#message")
 
-
-
-
-
-
-
-
-let cfboard=document.querySelectorAll('section.board')
-console.log(board)
 // let message = document.getElementById('click');
 // // function switchTurn () {
 // // }
 // // console.log(gameBoard.children)
 
 // let board = document.querySelector(".board");
-// console.log(cfBoard);
-
 // const message = document.getElementById("message")
 
 // const winnerLoser = document.querySelector("#winnerloser")
@@ -128,60 +108,49 @@ console.log(board)
 // const resetBtn = document.getElementById('resetBtn')
 
 /*----------------------------- Event Listeners -----------------------------*/
-// init()
+board.addEventListener("click", handleClick)
   
-board.addEventListener('click' , fillCircle);
-function fillCircle(evt) {
-  // fill in empty circle that is clicked
-  // when clicking on circle, the data will show in console.log
-  console.log("clickEvent,", evt);
 
+// function fillCircle(click, evt)
 
+// fill in empty circle that is clicked
+// when clicking on circle, the data will show in console.log
 
-  function handleClick(click, evt) {
-    board.function(fillCircle)
-    board.addEventListener("click", handleClick)
-  }
-  console.log(board);
+//console.log('click' , evt)done
+/*-------------------------------- Functions --------------------------------*/
 
-  // function fillCircle(click, evt)
-  
-  // fill in empty circle that is clicked
-  // when clicking on circle, the data will show in console.log
-
-  //console.log('click' , evt)done
-  /*-------------------------------- Functions --------------------------------*/
-
-  function init() {
-    boardArray = [
-      null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null
+init()
+function init() {
+  boardArray = [
     
-    ]
-  }
-  // console.log(boardArray)  //these nulls refer to the game board in order (Done)
-  function init()
-  {
-    function render() {
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null
+    
+  ]
+  message.textContent = 'Please start the game Player 1'
+  winner = null
+  turn = 1
+}
+// console.log(boardArray)  //these nulls refer to the game board in order (Done)
 
-      for (let i = 0; i < board.length; i++) {
-        // console.log(squares[i])
-        if ([i] === 1) {
-          board.children[i].textContent = 'blue'
-          message.textContent = 'Turn: blueO'
-        } else if
-          (BeforeUnloadEvent[i] === -1) {
-          board.children[i].textContent = 'red'
-          message.textContent = 'Turn: blue'
-        } else {
-          board.children[i].textContent = ""
-        }
+function render() {
   
+  for (let i = 0; i < board.length; i++) {
+      // console.log(squares[i])
+      if ([i] === 1) {
+        board.children[i].textContent = 'blue'
+        message.textContent = 'Turn: blueO'
+      } else if
+        (BeforeUnloadEvent[i] === -1) {
+        board.children[i].textContent = 'red'
+        message.textContent = 'Turn: blue'
+      } else {
+        board.children[i].textContent = ""
       }
+
     }
-  }
 }
