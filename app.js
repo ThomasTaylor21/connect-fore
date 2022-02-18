@@ -133,30 +133,33 @@ function init() {
   message.textContent = 'Please start the game Player 1'
   winner = null
   turn = 1
+  render()
 }
 // console.log(boardArray)  //these nulls refer to the game board in order (Done)
 function handleClick(evt) {
 let idx = parseInt(evt.target.id.slice(2)) 
-  
-  console.log(idx)
-  
+  let selectedCircle = evt.target
+  console.log(evt.target.style.backgroundColor)
+  console.log("circle had click")
+  return changeColorDisc(selectedCircle)
 }
 // want to change color of disc
 
-function changeColorDisc() {
-  board.forEach((circle, idx) => {
-    if (circle === -1) {
-      board[idx].style.bgColor = 'red'
+function changeColorDisc(c) {
+  console.dir(board)
+  // board.forEach((circle, idx) => {
+    if (turn === 1) {
+      c.style.backgroundColor = 'red'
     }
-    else if (circle !== -1) {
-      board[idx].style.bgColor = 'blue'
+    else if (turn !== 1) {
+      c.style.backgroundColor = 'blue'
     }
     else {
-      board[idx].style.bgColor = 'brown'
+      c.style.backgroundColor = 'brown'
     }
-console.log(changeColorDisc)
-  })
-
+// console.log(board[idx])
+  // })
+console.log(turn)
 }
 
 
@@ -164,17 +167,30 @@ console.log(changeColorDisc)
 function render() {
   
   for (let i = 0; i < board.length; i++) {
-      // console.log(squares[i])
-      if ([i] === 1) {
-        board.children[i].textContent = 'blue'
-        message.textContent = 'Turn: blueO'
-      } else if
-        (BeforeUnloadEvent[i] === -1) {
-        board.children[i].textContent = 'red'
-        message.textContent = 'Turn: blue'
-      } else {
-        board.children[i].textContent = ""
-      }
-
+    // console.log(squares[i])
+    if ([i] === 1) {
+      board.children[i].textContent = 'blue'
+      message.textContent = 'Turn: blue'
+    } else if
+      (BeforeUnloadEvent[i] === -1) {
+      board.children[i].textContent = 'red'
+      message.textContent = 'Turn: blue'
+    } else {
+      board.children[i].textContent = ""
     }
+render()
+  }
+  
+  function changePlayers(circle) {
+    let player1 = 1;
+    if (player1 = 1) {
+      document.getElementById(c).innerHTML = "blue";
+      player1 = 1
+    }
+    else {
+      document.getElementById(circle).innerHTML = "red";
+      player2 = -1
+    }
+
+  }
 }
