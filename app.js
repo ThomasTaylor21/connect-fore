@@ -133,54 +133,52 @@ function init() {
   message.textContent = 'Please start the game Player 1'
   winner = null
   turn = 1
+  numOfTurns = 0
+  playing = false
   render()
 }
-// console.log(boardArray)  //these nulls refer to the game board in order (Done)
+
 function handleClick(evt) {
-let idx = parseInt(evt.target.id.slice(2)) 
+  let idx = parseInt(evt.target.id.slice(2))
   let selectedCircle = evt.target
   return changeColorDiscAndTurn(selectedCircle)
+ 
+  // want to change color of disc
   
 }
-// want to change color of disc
-
-function changeColorDiscAndTurn(c) {
-  console.dir(board)
-  // board.forEach((circle, idx) => {
-    if (turn === 1) {
-      c.style.backgroundColor = 'red'
-      turn = -1
-    }
-    else if (turn === -1) {
-      c.style.backgroundColor = 'blue'
-      turn = 1
-    }
-    else {
-      c.style.backgroundColor = 'brown'
-    }
-// console.log(board[idx])
-  // })
-console.log(turn)
-}
-
-
-
 function render() {
   
   for (let i = 0; i < board.length; i++) {
     // console.log(squares[i])
     if ([i] === 1) {
-      board.children[i].textContent = 'blue'
+      // board.children[i].textContent = 'blue'
       message.textContent = 'Turn: blue'
     } else if
       (BeforeUnloadEvent[i] === -1) {
-      board.children[i].textContent = 'red'
+      // board.children[i].textContent = 'red'
       message.textContent = 'Turn: blue'
     } else {
-      board.children[i].textContent = ""
+      // board.children[i].textContent = ""
     }
-render()
+    // render()
   }
-  
+ 
+}
+function changeColorDiscAndTurn(c) {
+  console.dir(board)
+  // board.forEach((circle, idx) => {
+  if (turn === 1) {
+    c.style.backgroundColor = 'red'
+    turn = -1
   }
-
+  else if (turn === -1) {
+    c.style.backgroundColor = 'blue'
+    turn = 1
+  }
+  else {
+    c.style.backgroundColor = 'brown'
+  }
+  // console.log(board[idx])
+  // })
+  console.log(turn)
+}
