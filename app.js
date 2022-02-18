@@ -139,20 +139,21 @@ function init() {
 function handleClick(evt) {
 let idx = parseInt(evt.target.id.slice(2)) 
   let selectedCircle = evt.target
-  console.log(evt.target.style.backgroundColor)
-  console.log("circle had click")
-  return changeColorDisc(selectedCircle)
+  return changeColorDiscAndTurn(selectedCircle)
+  
 }
 // want to change color of disc
 
-function changeColorDisc(c) {
+function changeColorDiscAndTurn(c) {
   console.dir(board)
   // board.forEach((circle, idx) => {
     if (turn === 1) {
       c.style.backgroundColor = 'red'
+      turn = -1
     }
-    else if (turn !== 1) {
+    else if (turn === -1) {
       c.style.backgroundColor = 'blue'
+      turn = 1
     }
     else {
       c.style.backgroundColor = 'brown'
@@ -181,16 +182,5 @@ function render() {
 render()
   }
   
-  function changePlayers(circle) {
-    let player1 = 1;
-    if (player1 = 1) {
-      document.getElementById(c).innerHTML = "blue";
-      player1 = 1
-    }
-    else {
-      document.getElementById(circle).innerHTML = "red";
-      player2 = -1
-    }
-
   }
-}
+
