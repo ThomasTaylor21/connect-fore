@@ -75,7 +75,7 @@ const winFourArray = [
 // Winning lines where 4 in a row can exist (array) may be able to set up a for each that states if blue has four consecutive spots in and of the winning combo lines that player is winner, Else if not, then Player 2 
 // red has the same condition and if all 48 balls are used then it is a tie. 
 
-let squares, winner, turn
+let squares, winner, turn, boardArray
 // let gameOutcome = [isTie, winner, loser]
 let numOfTurns
 //const isTie = // === no winning combos found on the board, != winningCombos
@@ -140,45 +140,54 @@ function init() {
 
 function handleClick(evt) {
   let idx = parseInt(evt.target.id.slice(2))
-  let selectedCircle = evt.target
-  return changeColorDiscAndTurn(selectedCircle)
- 
+  // console.log(idx)
+  // let selectedCircle = evt.target
+  // return changeColorDiscAndTurn(selectedCircle)
+  const postion = parseInt(checkChip(idx))
+  // console.log(postion)
+  boardArray[postion] = turn
+  // console.log(boardArray)
+  render()
+  checkWinner()
+  turn = turn * -1
   // want to change color of disc
   
 }
-function render() {
-  
-  for (let i = 0; i < board.length; i++) {
-    // console.log(squares[i])
-    if ([i] === 1) {
-      // board.children[i].textContent = 'blue'
-      message.textContent = 'Turn: blue'
-    } else if
-      (BeforeUnloadEvent[i] === -1) {
-      // board.children[i].textContent = 'red'
-      message.textContent = 'Turn: blue'
-    } else {
-      // board.children[i].textContent = ""
-    }
-    // render()
+function checkChip(cell) {
+  for (let index = cell + 35; index >= 0; index -= 7) {
+    // console.log(boardArray[index])
+    if (boardArray[index] === null) {
+      return index
+    }  
   }
- 
 }
-function changeColorDiscAndTurn(c) {
-  console.dir(board)
-  // board.forEach((circle, idx) => {
-  if (turn === 1) {
-    c.style.backgroundColor = 'red'
-    turn = -1
+function checkWinner() {
+  for (let i = 0; i < winFourArray.length; i++){
+    const a = winFourArray[i][0]
+    const b = winFourArray[i][1]
+    const c = winFourArray[i][2]
+    const d = winFourArray[i][3]
+    if (boardArray[a] + boardArray[b] + boardArray[c] + boardArray[d] === 4) {
+      winner = 1
+      console.log("winner red")
+    }
+    if (boardArray[a] + boardArray[b] + boardArray[c] + boardArray[d] === -4) {
+      winner = -1
+      console.log("winner blue")
+    }
   }
-  else if (turn === -1) {
-    c.style.backgroundColor = 'blue'
-    turn = 1
-  }
-  else {
-    c.style.backgroundColor = 'brown'
-  }
-  // console.log(board[idx])
-  // })
-  console.log(turn)
+  
+}
+
+function render() {
+  boardArray.forEach(function (cell,i) {
+    if (cell === 1) {
+      board[i].style.backgroundColor = "red"
+    }
+    if (cell === -1) {
+      board[i].style.backgroundColor = "blue"
+    }
+  })
+  
+ 
 }
